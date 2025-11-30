@@ -37,6 +37,10 @@
       
       --color-purple-sacred: #7d5a9e;
       
+      /* Nuevo: Color cálido para urgencia amorosa */
+      --color-warm: #e07b39;
+      --color-warm-light: #f4a261;
+      
       /* Texto */
       --color-text-primary: #f0ece3;
       --color-text-secondary: #a8b2bc;
@@ -253,7 +257,6 @@
       background-size: cover;
       background-position: center;
       filter: grayscale(20%);
-      /* AQUÍ VA LA IMAGEN DEL BUEN PASTOR */
       background-image: url('Images/jesus-el-buen-pastor.jpg');
     }
 
@@ -271,11 +274,11 @@
     }
     
     /* ========================================
-       SLIDE 2: EL MANDAMIENTO OLVIDADO
+       SLIDE 2: UN LLAMADO QUE NOS ESPERA (antes: Mandamiento Olvidado)
     ======================================== */
     #slide-2 {
       background: 
-        linear-gradient(135deg, rgba(196, 69, 54, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(224, 123, 57, 0.1) 0%, transparent 50%),
         var(--color-bg-dark);
     }
     
@@ -287,14 +290,14 @@
       width: 100%;
     }
     
-    .warning-accent {
+    .urgency-accent {
       position: absolute;
       left: 0;
       top: 0;
       width: 8px;
       height: 100%;
-      background: linear-gradient(180deg, var(--color-red-warning), var(--color-red-light));
-      box-shadow: 0 0 30px var(--color-red-warning);
+      background: linear-gradient(180deg, var(--color-warm), var(--color-gold));
+      box-shadow: 0 0 30px var(--color-warm);
     }
     
     .slide-header {
@@ -317,8 +320,8 @@
       margin-bottom: 10px;
     }
     
-    .slide-title.warning {
-      color: var(--color-red-light);
+    .slide-title.urgency {
+      color: var(--color-warm-light);
     }
     
     .slide-title.hope {
@@ -362,8 +365,8 @@
       line-height: 1;
     }
     
-    .scripture-box.warning {
-      border-left: 5px solid var(--color-red-warning);
+    .scripture-box.urgency {
+      border-left: 5px solid var(--color-warm);
     }
     
     .scripture-box.hope {
@@ -394,8 +397,8 @@
       font-style: normal;
     }
     
-    .scripture-text .highlight-warning {
-      color: var(--color-red-light);
+    .scripture-text .highlight-urgency {
+      color: var(--color-warm-light);
       font-weight: 600;
     }
     
@@ -485,15 +488,15 @@
     }
     
     /* ========================================
-       SLIDE 4: CONSECUENCIAS
+       SLIDE 4: OPORTUNIDADES QUE NOS ESPERAN (antes: Consecuencias)
     ======================================== */
     #slide-4 {
       background: 
-        linear-gradient(135deg, rgba(196, 69, 54, 0.15) 0%, transparent 40%),
+        linear-gradient(135deg, rgba(74, 144, 164, 0.15) 0%, transparent 40%),
         var(--color-bg-deep);
     }
     
-    .consequences-grid {
+    .opportunities-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
@@ -501,26 +504,27 @@
       width: 100%;
     }
     
-    .consequence-item {
+    .opportunity-item {
       background: var(--color-bg-medium);
       border-radius: 10px;
       padding: 20px 25px;
-      border-left: 4px solid var(--color-red-warning);
+      border-left: 4px solid var(--color-blue-hope);
       display: flex;
       align-items: center;
       gap: 15px;
       transition: var(--transition-fast);
     }
     
-    .consequence-item:hover {
+    .opportunity-item:hover {
       background: var(--color-bg-light);
       transform: translateX(5px);
+      border-left-color: var(--color-gold);
     }
     
-    .consequence-icon {
+    .opportunity-icon {
       width: 40px;
       height: 40px;
-      background: rgba(196, 69, 54, 0.2);
+      background: rgba(74, 144, 164, 0.2);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -529,13 +533,13 @@
       flex-shrink: 0;
     }
     
-    .consequence-text {
+    .opportunity-text {
       font-family: var(--font-ui);
       font-size: 1rem;
     }
     
-    .consequence-text strong {
-      color: var(--color-red-light);
+    .opportunity-text strong {
+      color: var(--color-blue-light);
     }
     
     /* ========================================
@@ -686,20 +690,6 @@
       opacity: 1;
     }
     
-    .image-placeholder-text {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: var(--font-ui);
-      font-size: 0.8rem;
-      color: var(--color-text-muted);
-      text-align: center;
-      background: rgba(0,0,0,0.6);
-      padding: 8px 16px;
-      border-radius: 6px;
-    }
-    
     /* ========================================
        SLIDE 7: PALABRAS DEL PROFETA
     ======================================== */
@@ -781,7 +771,7 @@
     }
     
     /* ========================================
-       SLIDE 8: RESPONSABILIDAD DEL SACERDOCIO
+       SLIDE 8: PRIVILEGIO DEL SACERDOCIO (antes: Responsabilidad)
     ======================================== */
     #slide-8 {
       background: 
@@ -831,13 +821,15 @@
     }
     
     /* ========================================
-       SLIDE 9: EXCUSAS
+       SLIDE 9: OBSTÁCULOS QUE PODEMOS SUPERAR (antes: Excusas)
     ======================================== */
     #slide-9 {
-      background: var(--color-bg-dark);
+      background: 
+        radial-gradient(ellipse at 50% 50%, rgba(90, 147, 103, 0.1) 0%, transparent 60%),
+        var(--color-bg-dark);
     }
     
-    .excusas-grid {
+    .obstaculos-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 25px;
@@ -846,33 +838,34 @@
       margin: 30px 0;
     }
     
-    .excusa-card {
+    .obstaculo-card {
       background: var(--color-bg-medium);
       border-radius: 12px;
       padding: 25px 30px;
-      border-left: 5px solid var(--color-red-warning);
+      border-left: 5px solid var(--color-blue-hope);
       transition: var(--transition-fast);
       cursor: pointer;
     }
     
-    .excusa-card:hover {
+    .obstaculo-card:hover {
       transform: translateX(8px);
       background: var(--color-bg-light);
+      border-left-color: var(--color-green-action);
     }
     
-    .excusa-card:hover .excusa-response {
-      color: var(--color-gold-light);
+    .obstaculo-card:hover .obstaculo-response {
+      color: var(--color-green-light);
     }
     
-    .excusa-text {
+    .obstaculo-text {
       font-family: var(--font-body);
       font-size: 1.2rem;
       font-style: italic;
-      color: var(--color-red-light);
+      color: var(--color-text-secondary);
       margin-bottom: 12px;
     }
     
-    .excusa-response {
+    .obstaculo-response {
       font-family: var(--font-ui);
       font-size: 1rem;
       color: var(--color-gold);
@@ -882,12 +875,12 @@
       transition: var(--transition-fast);
     }
     
-    .excusa-response::before {
-      content: '→';
+    .obstaculo-response::before {
+      content: '💡';
       font-size: 1.2rem;
     }
     
-    .excusas-scripture {
+    .obstaculos-scripture {
       background: linear-gradient(135deg, rgba(212, 168, 83, 0.15), rgba(212, 168, 83, 0.05));
       border: 1px solid rgba(212, 168, 83, 0.3);
       border-radius: 14px;
@@ -1031,6 +1024,7 @@
       transition: var(--transition-medium);
       position: relative;
       overflow: hidden;
+      text-decoration: none;
     }
     
     .video-player-placeholder:hover {
@@ -1456,7 +1450,7 @@
       }
       
       .covenant-grid,
-      .excusas-grid,
+      .obstaculos-grid,
       .actividad-steps {
         grid-template-columns: 1fr;
       }
@@ -1479,7 +1473,7 @@
         padding: 30px 20px;
       }
       
-      .consequences-grid,
+      .opportunities-grid,
       .sacerdocio-grid,
       .acciones-grid {
         grid-template-columns: 1fr;
@@ -1511,14 +1505,14 @@
   <!-- Navegación por puntos -->
   <nav class="nav-dots" id="navDots">
     <div class="nav-dot active" data-slide="1" data-title="Portada"></div>
-    <div class="nav-dot" data-slide="2" data-title="El Mandamiento"></div>
-    <div class="nav-dot" data-slide="3" data-title="El Convenio"></div>
-    <div class="nav-dot" data-slide="4" data-title="Consecuencias"></div>
+    <div class="nav-dot" data-slide="2" data-title="El Llamado"></div>
+    <div class="nav-dot" data-slide="3" data-title="Nuestro Convenio"></div>
+    <div class="nav-dot" data-slide="4" data-title="Oportunidades"></div>
     <div class="nav-dot" data-slide="5" data-title="Predicad Mi Evangelio"></div>
     <div class="nav-dot" data-slide="6" data-title="El Salvador"></div>
     <div class="nav-dot" data-slide="7" data-title="Profeta"></div>
-    <div class="nav-dot" data-slide="8" data-title="Sacerdocio"></div>
-    <div class="nav-dot" data-slide="9" data-title="Excusas"></div>
+    <div class="nav-dot" data-slide="8" data-title="Privilegio"></div>
+    <div class="nav-dot" data-slide="9" data-title="Superemos Obstáculos"></div>
     <div class="nav-dot" data-slide="10" data-title="Acciones"></div>
     <div class="nav-dot" data-slide="11" data-title="Video"></div>
     <div class="nav-dot" data-slide="12" data-title="Actividad"></div>
@@ -1538,7 +1532,6 @@
          SLIDE 1: PORTADA
     =========================================== -->
     <section class="slide" id="slide-1">
-      <!-- AQUÍ VA LA IMAGEN DE FONDO DEL BUEN PASTOR -->
       <div class="portada-bg-image" style="background-image: url('Images/jesus-el-buen-pastor.jpg');"></div>
       <div class="portada-overlay"></div>
       
@@ -1546,44 +1539,44 @@
         <div class="portada-decorative-line"></div>
         <h1 class="portada-title">Apacienta Mis Ovejas</h1>
         <p class="portada-scripture-ref">— Juan 21:17</p>
-        <p class="portada-subtitle">Una Invitación Urgente del Señor</p>
+        <p class="portada-subtitle">Una Invitación de Amor del Salvador</p>
         <div class="portada-divider"></div>
         <p class="portada-meta">Capacitación de Ministración</p>
       </div>
     </section>
     
     <!-- ==========================================
-         SLIDE 2: EL MANDAMIENTO OLVIDADO
+         SLIDE 2: UN LLAMADO QUE NOS ESPERA (TONO CAMBIADO)
     =========================================== -->
     <section class="slide" id="slide-2">
-      <div class="warning-accent"></div>
+      <div class="urgency-accent"></div>
       
       <div class="slide-2-content">
         <div class="slide-header slide-animate">
           <p class="slide-number">Diapositiva 01</p>
-          <h2 class="slide-title warning">El Mandamiento Olvidado</h2>
-          <p class="slide-subtitle">Una advertencia que debemos escuchar</p>
+          <h2 class="slide-title urgency">Un Llamado que Nos Espera</h2>
+          <p class="slide-subtitle">El Señor nos necesita hoy más que nunca</p>
         </div>
         
-        <div class="scripture-box warning slide-animate stagger-1">
+        <div class="scripture-box urgency slide-animate stagger-1">
           <p class="scripture-text">
             "¡Ay de los pastores de Israel, que se apacientan a sí mismos! ¿No apacientan los pastores a los rebaños? 
-            <span class="highlight-warning">No fortalecisteis las débiles, ni curasteis la enferma; no vendasteis la perniquebrada, 
+            <span class="highlight-urgency">No fortalecisteis las débiles, ni curasteis la enferma; no vendasteis la perniquebrada, 
             no volvisteis la descarriada, ni buscasteis la perdida...</span>"
           </p>
           <p class="scripture-ref">— Ezequiel 34:2-4</p>
         </div>
         
-        <div class="scripture-box warning slide-animate stagger-2" style="background: rgba(196, 69, 54, 0.1);">
-          <p class="scripture-text" style="color: var(--color-red-light);">
-            "Y andan errantes por falta de pastor, y son presa de todas las fieras del campo, y se han dispersado."
+        <div class="scripture-box hope slide-animate stagger-2">
+          <p class="scripture-text">
+            Estas palabras no son para condenarnos, sino para <span class="highlight">despertarnos</span>. 
+            Hay hermanos esperando que alguien toque su puerta. <span class="highlight">¿Seremos nosotros?</span>
           </p>
-          <p class="scripture-ref">— Ezequiel 34:5</p>
         </div>
         
         <div class="reflection-box slide-animate stagger-3">
-          <p class="reflection-label">Pregunta para reflexionar</p>
-          <p class="reflection-text">Hermanos, ¿nos hemos convertido en pastores que solo se apacientan a sí mismos?</p>
+          <p class="reflection-label">Invitación a reflexionar</p>
+          <p class="reflection-text">Hermanos, el Señor confía en nosotros. <strong style="color: var(--color-gold);">¿Qué bendiciones nos esperan al responder a Su llamado?</strong></p>
         </div>
       </div>
     </section>
@@ -1595,8 +1588,8 @@
       <div class="slide-2-content">
         <div class="slide-header slide-animate">
           <p class="slide-number">Diapositiva 02</p>
-          <h2 class="slide-title hope">La Promesa del Convenio Bautismal</h2>
-          <p class="slide-subtitle">Lo que prometimos al entrar en las aguas del bautismo</p>
+          <h2 class="slide-title hope">Nuestro Hermoso Convenio Bautismal</h2>
+          <p class="slide-subtitle">Las promesas que nos conectan con el cielo</p>
         </div>
         
         <div class="scripture-box hope slide-animate stagger-1">
@@ -1627,59 +1620,60 @@
         </div>
         
         <div class="reflection-box slide-animate stagger-5">
-          <p class="reflection-label">Reflexión</p>
-          <p class="reflection-text">Este fue el convenio que hicimos al bautizarnos. <strong style="color: var(--color-gold);">¿Lo estamos cumpliendo?</strong></p>
+          <p class="reflection-label">Una promesa bendita</p>
+          <p class="reflection-text">Al cumplir este convenio, el Señor promete derramar Su Espíritu sobre nosotros. <strong style="color: var(--color-gold);">¡Qué privilegio!</strong></p>
         </div>
       </div>
     </section>
     
     <!-- ==========================================
-         SLIDE 4: LAS CONSECUENCIAS
+         SLIDE 4: OPORTUNIDADES QUE NOS ESPERAN (TONO CAMBIADO)
     =========================================== -->
     <section class="slide" id="slide-4">
       <div class="slide-2-content">
         <div class="slide-header slide-animate">
           <p class="slide-number">Diapositiva 03</p>
-          <h2 class="slide-title warning">Las Consecuencias de No Ministrar</h2>
-          <p class="slide-subtitle">Lo que sucede cuando abandonamos a las ovejas</p>
+          <h2 class="slide-title hope">Oportunidades de Bendecir</h2>
+          <p class="slide-subtitle">Cada persona es una oportunidad de servir como el Salvador</p>
         </div>
         
-        <div class="consequences-grid">
-          <div class="scripture-box warning slide-animate stagger-1">
+        <div class="opportunities-grid">
+          <div class="scripture-box hope slide-animate stagger-1">
             <p class="scripture-text">
-              "No fortalecisteis las débiles, ni curasteis la enferma; no vendasteis la perniquebrada, 
-              no volvisteis la descarriada, ni buscasteis la perdida..."
+              Hay almas preciosas esperando que alguien las <span class="highlight">fortalezca</span>, 
+              las <span class="highlight">cure</span>, las <span class="highlight">vende</span>, 
+              las <span class="highlight">vuelva</span> y las <span class="highlight">busque</span>.
             </p>
-            <p class="scripture-ref">— Ezequiel 34:4</p>
+            <p class="scripture-ref">— Inspirado en Ezequiel 34:4</p>
           </div>
           
           <div class="slide-animate stagger-2" style="display: flex; flex-direction: column; gap: 15px;">
-            <div class="consequence-item">
-              <div class="consequence-icon">✗</div>
-              <p class="consequence-text"><strong>No fortalecemos</strong> a los débiles en la fe</p>
+            <div class="opportunity-item">
+              <div class="opportunity-icon">🌟</div>
+              <p class="opportunity-text"><strong>Podemos fortalecer</strong> a quienes flaquean en la fe</p>
             </div>
-            <div class="consequence-item">
-              <div class="consequence-icon">✗</div>
-              <p class="consequence-text"><strong>No curamos</strong> a los que sufren</p>
+            <div class="opportunity-item">
+              <div class="opportunity-icon">💚</div>
+              <p class="opportunity-text"><strong>Podemos consolar</strong> a quienes sufren en silencio</p>
             </div>
-            <div class="consequence-item">
-              <div class="consequence-icon">✗</div>
-              <p class="consequence-text"><strong>No vendamos</strong> las heridas espirituales</p>
+            <div class="opportunity-item">
+              <div class="opportunity-icon">🤝</div>
+              <p class="opportunity-text"><strong>Podemos sanar</strong> corazones heridos</p>
             </div>
-            <div class="consequence-item">
-              <div class="consequence-icon">✗</div>
-              <p class="consequence-text"><strong>No volvemos</strong> a los descarriados</p>
+            <div class="opportunity-item">
+              <div class="opportunity-icon">🏠</div>
+              <p class="opportunity-text"><strong>Podemos guiar</strong> a quienes buscan el camino</p>
             </div>
-            <div class="consequence-item">
-              <div class="consequence-icon">✗</div>
-              <p class="consequence-text"><strong>No buscamos</strong> a los perdidos</p>
+            <div class="opportunity-item">
+              <div class="opportunity-icon">🔍</div>
+              <p class="opportunity-text"><strong>Podemos encontrar</strong> a quienes se sienten perdidos</p>
             </div>
           </div>
         </div>
         
-        <div class="reflection-box slide-animate stagger-3" style="background: rgba(196, 69, 54, 0.1); border-color: rgba(196, 69, 54, 0.3);">
-          <p class="reflection-label" style="color: var(--color-red-light);">Advertencia</p>
-          <p class="reflection-text">Cada hermano que se pierde mientras nosotros estamos cómodos en casa, pesa sobre nosotros.</p>
+        <div class="reflection-box slide-animate stagger-3" style="background: rgba(74, 144, 164, 0.1); border-color: rgba(74, 144, 164, 0.3);">
+          <p class="reflection-label" style="color: var(--color-blue-light);">El gozo que nos espera</p>
+          <p class="reflection-text">Cada vez que tocamos una vida, sentimos el amor del Salvador fluyendo a través de nosotros.</p>
         </div>
       </div>
     </section>
@@ -1719,7 +1713,7 @@
         
         <div class="reflection-box slide-animate stagger-3" style="background: rgba(90, 147, 103, 0.1); border-color: rgba(90, 147, 103, 0.3);">
           <p class="reflection-label" style="color: var(--color-green-light);">Pregunta</p>
-          <p class="reflection-text">¿Cómo podemos desarrollar más caridad hacia aquellos que ministramos?</p>
+          <p class="reflection-text">¿Cómo podemos pedir al Señor que llene nuestro corazón de caridad hacia aquellos que ministramos?</p>
         </div>
       </div>
     </section>
@@ -1730,7 +1724,7 @@
     <section class="slide" id="slide-6">
       <div class="slide-header slide-animate" style="text-align: center; margin-bottom: 40px;">
         <p class="slide-number">Diapositiva 05</p>
-        <h2 class="slide-title sacred">El Ejemplo del Salvador</h2>
+        <h2 class="slide-title sacred">El Ejemplo Perfecto del Salvador</h2>
       </div>
       
       <div class="salvador-layout">
@@ -1763,11 +1757,11 @@
 
         <!-- IMAGEN DEL SALVADOR BENDICIENDO -->
         <div class="salvador-image-container slide-animate stagger-3">
-          <img src="Images/blessing.jpg" alt="El Salvador bendiciendo" style="opacity: 1; filter: none;">
+          <img src="Images/Blessing.jpg" alt="El Salvador bendiciendo" style="opacity: 1; filter: none;">
         </div>
       </div>
     </section>
-    
+
     <!-- ==========================================
          SLIDE 7: PALABRAS DEL PROFETA
     =========================================== -->
@@ -1793,13 +1787,13 @@
     </section>
     
     <!-- ==========================================
-         SLIDE 8: RESPONSABILIDAD DEL SACERDOCIO
+         SLIDE 8: EL PRIVILEGIO DEL SACERDOCIO (TONO CAMBIADO)
     =========================================== -->
     <section class="slide" id="slide-8">
       <div class="slide-header slide-animate" style="text-align: center; margin-bottom: 20px;">
         <p class="slide-number">Diapositiva 07</p>
-        <h2 class="slide-title" style="color: #b794d4;">La Responsabilidad del Sacerdocio</h2>
-        <p class="slide-subtitle">No es opcional, es un mandamiento</p>
+        <h2 class="slide-title" style="color: #b794d4;">El Privilegio del Sacerdocio</h2>
+        <p class="slide-subtitle">Un don sagrado que nos permite servir como Él</p>
       </div>
       
       <div class="sacerdocio-grid">
@@ -1819,14 +1813,15 @@
         
         <div class="sacerdocio-message slide-animate stagger-3">
           <p class="sacerdocio-message-text">
-            El sacerdocio viene con <strong>RESPONSABILIDADES</strong> que no podemos ignorar.
-            <br><span style="font-size: 1.1rem; color: var(--color-text-secondary);">No es un título honorífico. Es un llamado al servicio.</span>
+            El sacerdocio es un <strong>PRIVILEGIO</strong> que nos permite bendecir vidas.
+            <br><span style="font-size: 1.1rem; color: var(--color-text-secondary);">¡Qué honor ser instrumentos en las manos del Señor!</span>
           </p>
         </div>
         
         <div class="scripture-box sacred slide-animate stagger-4" style="grid-column: 1 / -1;">
           <p class="scripture-text" style="text-align: center;">
             "Porque a todo aquel a quien se haya dado mucho, <span class="highlight">mucho se le demandará</span>."
+            <br><span style="font-size: 1rem; color: var(--color-text-secondary); font-style: normal;">Y con ello, muchas bendiciones también.</span>
           </p>
           <p class="scripture-ref" style="text-align: center;">— Lucas 12:48</p>
         </div>
@@ -1834,40 +1829,41 @@
     </section>
     
     <!-- ==========================================
-         SLIDE 9: ¿POR QUÉ NO MINISTRAMOS?
+         SLIDE 9: OBSTÁCULOS QUE PODEMOS SUPERAR (TONO CAMBIADO COMPLETAMENTE)
     =========================================== -->
     <section class="slide" id="slide-9">
       <div class="slide-header slide-animate" style="text-align: center; margin-bottom: 20px;">
         <p class="slide-number">Diapositiva 08</p>
-        <h2 class="slide-title warning">¿Por Qué No Ministramos?</h2>
-        <p class="slide-subtitle">Las excusas que nos damos a nosotros mismos</p>
+        <h2 class="slide-title hope">Obstáculos que Podemos Superar Juntos</h2>
+        <p class="slide-subtitle">El Señor nos ayudará a vencer cada desafío</p>
       </div>
       
-      <div class="excusas-grid">
-        <div class="excusa-card slide-animate stagger-1">
-          <p class="excusa-text">"No tengo tiempo"</p>
-          <p class="excusa-response">¿Para el Señor tampoco?</p>
+      <div class="obstaculos-grid">
+        <div class="obstaculo-card slide-animate stagger-1">
+          <p class="obstaculo-text">"Siento que no tengo tiempo"</p>
+          <p class="obstaculo-response">5 minutos bastan para cambiar un día. El Señor multiplicará tu tiempo.</p>
         </div>
         
-        <div class="excusa-card slide-animate stagger-2">
-          <p class="excusa-text">"No sé qué decir"</p>
-          <p class="excusa-response">El Espíritu te guiará (D&C 84:85)</p>
+        <div class="obstaculo-card slide-animate stagger-2">
+          <p class="obstaculo-text">"No sé qué decir"</p>
+          <p class="obstaculo-response">Tu presencia dice más que mil palabras. El Espíritu te guiará (D&C 84:85)</p>
         </div>
         
-        <div class="excusa-card slide-animate stagger-3">
-          <p class="excusa-text">"Ellos no quieren que los visite"</p>
-          <p class="excusa-response">¿Cómo lo sabes? ¿Has intentado?</p>
+        <div class="obstaculo-card slide-animate stagger-3">
+          <p class="obstaculo-text">"Creo que no quieren que los visite"</p>
+          <p class="obstaculo-response">Muchos esperan en silencio. Un mensaje puede abrir puertas.</p>
         </div>
         
-        <div class="excusa-card slide-animate stagger-4">
-          <p class="excusa-text">"No me caen bien"</p>
-          <p class="excusa-response">El Señor te manda amarlos, no que te caigan bien.</p>
+        <div class="obstaculo-card slide-animate stagger-4">
+          <p class="obstaculo-text">"No los conozco bien"</p>
+          <p class="obstaculo-response">Cada visita es una oportunidad de conocerlos y amarlos más.</p>
         </div>
       </div>
       
-      <div class="excusas-scripture slide-animate stagger-5">
+      <div class="obstaculos-scripture slide-animate stagger-5">
         <p class="scripture-text" style="font-size: 1.4rem; text-align: center;">
           "Recordad que el <span class="highlight">valor de las almas</span> es grande a la vista de Dios."
+          <br><span style="font-size: 1rem; color: var(--color-text-secondary); font-style: normal;">Y el Señor nos ayudará a alcanzarlas.</span>
         </p>
         <p class="scripture-ref" style="text-align: center; margin-top: 15px;">— D&C 18:10</p>
       </div>
@@ -1879,8 +1875,8 @@
     <section class="slide" id="slide-10">
       <div class="slide-header slide-animate" style="text-align: center; margin-bottom: 20px;">
         <p class="slide-number">Diapositiva 09</p>
-        <h2 class="slide-title action">Acciones Concretas</h2>
-        <p class="slide-subtitle">Qué puedes hacer ESTA SEMANA</p>
+        <h2 class="slide-title action">Pequeñas Acciones, Grandes Bendiciones</h2>
+        <p class="slide-subtitle">Ideas sencillas para esta semana</p>
       </div>
       
       <div class="acciones-grid">
@@ -1893,7 +1889,7 @@
         <div class="accion-card slide-animate stagger-2">
           <p class="accion-number">2</p>
           <p class="accion-title">Hacer una Llamada</p>
-          <p class="accion-desc">5 minutos para saber cómo está</p>
+          <p class="accion-desc">5 minutos para saber cómo están</p>
         </div>
         
         <div class="accion-card slide-animate stagger-3">
@@ -1917,8 +1913,8 @@
       
       <div class="acciones-cta slide-animate" style="transition-delay: 0.6s;">
         <p class="acciones-cta-text">
-          <span class="highlight-green">No esperes a la próxima semana.</span> 
-          El Señor necesita que actúes <span class="highlight-gold">AHORA</span>.
+          <span class="highlight-green">Cada pequeño esfuerzo cuenta.</span> 
+          El Señor bendecirá tus intentos <span class="highlight-gold">HOY</span>.
         </p>
       </div>
     </section>
@@ -1929,22 +1925,22 @@
     <section class="slide" id="slide-11">
       <div class="video-container">
         <div class="slide-header slide-animate" style="text-align: center;">
-          <p class="slide-number">Momento de Reflexión</p>
+          <p class="slide-number">Momento de Inspiración</p>
           <h2 class="slide-title sacred">Video: Ministrar a la Manera del Salvador</h2>
         </div>
         
-        <div class="video-player-placeholder slide-animate stagger-1">
+        <a href="https://www.youtube.com/watch?v=V2jedkfVmiE" target="_blank" class="video-player-placeholder slide-animate stagger-1">
           <div class="play-button">
             <div class="play-icon"></div>
           </div>
           <p class="video-title">"Ministrar a la Manera del Salvador"</p>
-          <p class="video-duration">Duración: 3-4 minutos | churchofjesuschrist.org/media</p>
-        </div>
+          <p class="video-duration">Haz clic para ver el video en YouTube</p>
+        </a>
         
         <div class="video-questions slide-animate stagger-2">
           <div class="video-question">
             <strong style="color: var(--color-gold);">Pregunta 1:</strong><br>
-            ¿Qué le impresionó del video?
+            ¿Qué le inspiró del video?
           </div>
           <div class="video-question">
             <strong style="color: var(--color-gold);">Pregunta 2:</strong><br>
@@ -1991,7 +1987,7 @@
           <p class="timer-value">10 min</p>
         </div>
         <div class="timer-note">
-          <strong>Nota:</strong> Esta no es una actividad para "después". Es para AHORA. El Señor espera que actuemos, no que planifiquemos eternamente.
+          <strong>Invitación:</strong> Aprovechemos este momento para sentir la guía del Espíritu. Él nos mostrará qué hacer.
         </div>
       </div>
     </section>
@@ -2002,7 +1998,7 @@
     <section class="slide" id="slide-13">
       <div class="compromiso-content">
         <div class="slide-header slide-animate" style="text-align: center;">
-          <h2 class="slide-title sacred" style="font-size: 2.5rem;">El Compromiso</h2>
+          <h2 class="slide-title sacred" style="font-size: 2.5rem;">Nuestra Invitación</h2>
         </div>
         
         <div class="compromiso-main-scripture slide-animate stagger-1">
@@ -2014,9 +2010,9 @@
         </div>
         
         <div class="compromiso-message slide-animate stagger-2">
-          <p class="compromiso-line">Hermanos, el Señor cuenta con ustedes.</p>
-          <p class="compromiso-line">Sus ovejas los necesitan.</p>
-          <p class="compromiso-question">¿Responderán al llamado?</p>
+          <p class="compromiso-line">Hermanos, el Señor confía en nosotros.</p>
+          <p class="compromiso-line">Hay personas esperando nuestro amor.</p>
+          <p class="compromiso-question">¿Aceptamos la invitación del Salvador?</p>
         </div>
         
         <div class="compromiso-cards slide-animate stagger-3">
@@ -2058,7 +2054,7 @@
         </p>
         
         <p class="cierre-blessing slide-animate stagger-4">
-          Que el Señor los bendiga al cumplir con su sagrado llamado
+          Que el Señor los bendiga abundantemente al cumplir con este sagrado privilegio
         </p>
         
         <div class="cierre-decorative-lines slide-animate stagger-5">
@@ -2093,11 +2089,9 @@
       const slideObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Activar animaciones de elementos internos
             const animatedElements = entry.target.querySelectorAll('.slide-animate');
             animatedElements.forEach(el => el.classList.add('visible'));
             
-            // Actualizar navegación
             const slideIndex = Array.from(slides).indexOf(entry.target);
             updateNavigation(slideIndex);
             currentSlide = slideIndex;
@@ -2111,12 +2105,10 @@
       // ACTUALIZAR NAVEGACIÓN Y PROGRESO
       // ==========================================
       function updateNavigation(index) {
-        // Actualizar dots
         navDots.forEach((dot, i) => {
           dot.classList.toggle('active', i === index);
         });
         
-        // Actualizar barra de progreso
         const progress = ((index + 1) / slides.length) * 100;
         progressBar.style.width = `${progress}%`;
       }
@@ -2181,11 +2173,11 @@
       // ==========================================
       // EFECTOS DE HOVER EN TARJETAS
       // ==========================================
-      const cards = document.querySelectorAll('.covenant-card, .accion-card, .excusa-card, .step-card, .compromiso-card');
+      const cards = document.querySelectorAll('.covenant-card, .accion-card, .obstaculo-card, .step-card, .compromiso-card');
       
       cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-          card.style.transform = card.classList.contains('excusa-card') ? 'translateX(8px)' : 'translateY(-8px)';
+          card.style.transform = card.classList.contains('obstaculo-card') ? 'translateX(8px)' : 'translateY(-8px)';
         });
         
         card.addEventListener('mouseleave', () => {
